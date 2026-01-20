@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills portfolio | English</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="module" src="../assets/icons.js"></script>
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <span>↑</span>
+    </button>
+    <main class="container">
+      <header class="site-header">
+        <div class="header-left">
+          <h1 class="site-title">Vincent GÉNIN</h1>
+          <p class="site-subtitle muted">Data Analyst</p>
+        </div>
+        <div class="header-right">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon" style="display:none;">🌙</span>
+          </button>
+          <nav class="nav" aria-label="Navigation">
+            <a href="./cv.html">CV</a>
+            <a href="./skills.html" aria-current="page">Skills portfolio</a>
+            <a href="./contact.html">Contact</a>
+            <span class="lang-switch muted">|</span>
+            <a href="../fr/competences.html" class="lang-switch">FR</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>Projects & Skills</h2>
+        
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="data">Data Analysis</button>
+          <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+          <button class="filter-btn" data-filter="dev">Development</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-tags="data dashboard">
+            <img src="../assets/project1-thumb.jpg" alt="Dashboard Bouygues" class="project-image" />
+            <h3 class="project-title">Operational Dashboard – Bouygues Telecom</h3>
+            <p class="project-description">
+              Design and maintenance of interactive dashboards in Tableau for performance indicators tracking.
+              Reduced workload by 30 min/day for production teams.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">Oracle</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Demo</a>
+              <a href="#" class="project-link">PDF Report</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-tags="automation data">
+            <img src="../assets/project2-thumb.jpg" alt="Process Automation" class="project-image" />
+            <h3 class="project-title">Process Automation – Bouygues Telecom</h3>
+            <p class="project-description">
+              Web application (NestJS/React) to automate business processes and reduce manual tasks.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link">Documentation</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-tags="dev data">
+            <img src="../assets/project3-thumb.jpg" alt="Pokémon Database" class="project-image" />
+            <h3 class="project-title">Pokémon Database</h3>
+            <p class="project-description">
+              Complete database creation and management for a Pokémon game with complex queries and optimization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Database</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">GitHub</a>
+              <a href="#" class="project-link">Demo</a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-tags="dev">
+            <img src="../assets/project4-thumb.jpg" alt="Airport Simulator" class="project-image" />
+            <h3 class="project-title">Airport Traffic Simulator</h3>
+            <p class="project-description">
+              Traffic management simulation application with optimization algorithms and graphical interface.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Algorithms</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Code</a>
+              <a href="#" class="project-link">Screenshots</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small class="muted">You can add/modify these projects by sending details.</small>
+      </footer>
+    </main>
+
+    <script>
+      // Project filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter;
+          
+          // Update active buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          // Filter projects
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.dataset.tags.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
