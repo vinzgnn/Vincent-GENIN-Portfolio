@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#006633"/>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Automatisation</text>
+  <text x="200" y="150" text-anchor="middle" fill="white" font-size="20" font-family="Arial">Processus</text>
+  <text x="200" y="190" text-anchor="middle" fill="#66CCFF" font-size="16" font-family="Arial">React • NestJS • API</text>
+</svg>

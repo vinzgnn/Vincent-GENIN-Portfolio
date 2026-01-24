@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#CC0000"/>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Base de Données</text>
+  <text x="200" y="150" text-anchor="middle" fill="white" font-size="20" font-family="Arial">Pokémon</text>
+  <text x="200" y="190" text-anchor="middle" fill="#FFFF00" font-size="16" font-family="Arial">SQL • Python • DB</text>
+</svg>
