@@ -433,7 +433,8 @@ hr {
 }
 
 .project-card.featured .project-image {
-  height: 320px;
+  height: auto;
+  max-height: 520px;
   object-fit: cover;
   object-position: top;
   border: 1px solid var(--border);
@@ -450,17 +451,61 @@ hr {
 
 .project-gallery img {
   width: 100%;
-  height: 200px;
+  height: 320px;
   object-fit: cover;
   object-position: top;
   border-radius: 6px;
   border: 1px solid var(--border);
+  cursor: zoom-in;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .project-gallery img:hover {
   transform: scale(1.01);
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 20px;
+}
+
+.lightbox-overlay.open {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 95vw;
+  max-height: 92vh;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
 }
 
 .project-impact {

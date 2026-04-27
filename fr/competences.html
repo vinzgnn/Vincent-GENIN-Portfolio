@@ -107,5 +107,29 @@
       </footer>
     </main>
 
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">✕</button>
+      <img src="" alt="" id="lightbox-img" />
+    </div>
+
+    <script>
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.project-image, .project-gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          overlay.classList.add('open');
+        });
+      });
+
+      function closeLightbox() { overlay.classList.remove('open'); }
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+
   </body>
 </html>
