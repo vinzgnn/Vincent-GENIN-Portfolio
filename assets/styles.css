@@ -428,6 +428,51 @@ hr {
   background: var(--subtle);
 }
 
+.project-card.featured {
+  grid-column: 1 / -1;
+}
+
+.project-card.featured .project-image {
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+}
+
+.project-gallery {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.project-gallery img {
+  flex: 1;
+  height: 90px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.project-impact {
+  background: var(--subtle);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  margin: 10px 0 14px;
+  color: var(--text);
+}
+
 @media print {
   .nav,
   .lang-switch,

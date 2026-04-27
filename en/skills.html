@@ -16,7 +16,7 @@
       <header class="site-header">
         <div class="header-left">
           <h1 class="site-title">Vincent GÉNIN</h1>
-          <p class="site-subtitle muted">Data Analyst</p>
+          <p class="site-subtitle muted">Data Analyst | SQL, Power BI, Tableau, Dataiku</p>
         </div>
         <div class="header-right">
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -34,8 +34,8 @@
       </header>
 
       <section class="card">
-        <h2>Projects & Skills</h2>
-        
+        <h2>Projects &amp; Skills</h2>
+
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="data">Data Analysis</button>
@@ -45,102 +45,88 @@
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card" data-tags="data dashboard">
-            <img src="../assets/project1-thumb.jpg" alt="Dashboard Bouygues" class="project-image" />
-            <h3 class="project-title">Operational Dashboard – Bouygues Telecom</h3>
-            <p class="project-description">
-              Design and maintenance of interactive dashboards in Tableau for performance indicators tracking.
-              Reduced workload by 30 min/day for production teams.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Tableau</span>
-              <span class="tech-tag">Oracle</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">Data Analysis</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Demo</a>
-              <a href="#" class="project-link">PDF Report</a>
-            </div>
-          </article>
 
-          <!-- Project 2 -->
-          <article class="project-card" data-tags="automation data">
-            <img src="../assets/project2-thumb.jpg" alt="Process Automation" class="project-image" />
-            <h3 class="project-title">Process Automation – Bouygues Telecom</h3>
+          <!-- Main project: Check_Prod -->
+          <article class="project-card featured" data-tags="data dashboard automation dev">
+            <img
+              src="../assets/screenshots/etat-services-dashboard.png"
+              alt="Check_Prod — IT service monitoring dashboard"
+              class="project-image"
+            />
+            <div class="project-gallery">
+              <img src="../assets/screenshots/etat-services-historique.png" alt="History view — trend charts" />
+              <img src="../assets/screenshots/etat-services-admin.png" alt="Administration view — scope management" />
+            </div>
+            <h3 class="project-title">Check_Prod — IT Service Monitoring · Bouygues Telecom</h3>
             <p class="project-description">
-              Web application (NestJS/React) to automate business processes and reduce manual tasks.
+              Full-stack web application designed and deployed in production to automate daily IT service status monitoring.
+              Teams report the status of each service (Available / Degraded / Unavailable), review 7-day trends and send automated reports.
             </p>
+            <div class="project-impact">
+              → Replaced a critical manual process · Time savings of up to <strong>1h/day</strong> · In production across multiple teams · Improved data reliability
+            </div>
             <div class="project-tech">
               <span class="tech-tag">React</span>
-              <span class="tech-tag">NestJS</span>
               <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Automation</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Oracle SQL</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Git / GitLab</span>
+              <span class="tech-tag">ServiceNow</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link">View Project</a>
-              <a href="#" class="project-link">Documentation</a>
+              <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="project-card" data-tags="dev data">
-            <img src="../assets/project3-thumb.jpg" alt="Pokémon Database" class="project-image" />
-            <h3 class="project-title">Pokémon Database</h3>
+          <!-- Project 2: Data & KPI -->
+          <article class="project-card" data-tags="data dashboard">
+            <h3 class="project-title">Data Analysis &amp; Operational KPIs · Bouygues Telecom</h3>
             <p class="project-description">
-              Complete database creation and management for a Pokémon game with complex queries and optimization.
+              Extraction, cleaning and structuring of data from Oracle databases.
+              Design and maintenance of interactive dashboards in Tableau for IT service performance monitoring.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Oracle</span>
+              <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">DBVisualizer</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Artefact -->
+          <article class="project-card" data-tags="data">
+            <h3 class="project-title">Data Analytics Projects · Artefact School of Data</h3>
+            <p class="project-description">
+              Training in progress since March 2026. Business-oriented data projects using a modern analytics stack.
             </p>
             <div class="project-tech">
               <span class="tech-tag">SQL</span>
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Database</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">GitHub</a>
-              <a href="#" class="project-link">Demo</a>
+              <span class="tech-tag">BigQuery</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Looker Studio</span>
+              <span class="tech-tag">API</span>
             </div>
           </article>
 
-          <!-- Project 4 -->
-          <article class="project-card" data-tags="dev">
-            <img src="../assets/project4-thumb.jpg" alt="Airport Simulator" class="project-image" />
-            <h3 class="project-title">Airport Traffic Simulator</h3>
-            <p class="project-description">
-              Traffic management simulation application with optimization algorithms and graphical interface.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">Algorithms</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Code</a>
-              <a href="#" class="project-link">Screenshots</a>
-            </div>
-          </article>
         </div>
       </section>
 
       <footer class="footer">
-        <small class="muted">You can add/modify these projects by sending details.</small>
       </footer>
     </main>
 
     <script>
-      // Project filtering
       const filterBtns = document.querySelectorAll('.filter-btn');
       const projectCards = document.querySelectorAll('.project-card');
 
       filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           const filter = btn.dataset.filter;
-          
-          // Update active buttons
           filterBtns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          
-          // Filter projects
           projectCards.forEach(card => {
             if (filter === 'all' || card.dataset.tags.includes(filter)) {
               card.style.display = 'block';
