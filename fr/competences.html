@@ -36,14 +36,6 @@
       <section class="card">
         <h2>Projets et compétences</h2>
 
-        <div class="filter-group">
-          <button class="filter-btn active" data-filter="all">Tous</button>
-          <button class="filter-btn" data-filter="data">Data Analyse</button>
-          <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-          <button class="filter-btn" data-filter="automation">Automatisation</button>
-          <button class="filter-btn" data-filter="dev">Développement</button>
-        </div>
-
         <!-- Projet principal : Check_Prod (hors grid pour garantir pleine largeur) -->
         <article class="project-card featured" data-tags="data dashboard automation dev">
           <img
@@ -71,9 +63,6 @@
             <span class="tech-tag">MySQL</span>
             <span class="tech-tag">Git / GitLab</span>
             <span class="tech-tag">ServiceNow</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </article>
 
@@ -118,24 +107,5 @@
       </footer>
     </main>
 
-    <script>
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const projectCards = document.querySelectorAll('.project-card');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter;
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          projectCards.forEach(card => {
-            if (filter === 'all' || card.dataset.tags.includes(filter)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
