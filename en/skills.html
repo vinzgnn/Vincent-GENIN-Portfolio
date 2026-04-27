@@ -44,40 +44,40 @@
           <button class="filter-btn" data-filter="dev">Development</button>
         </div>
 
-        <div class="projects-grid">
+        <!-- Main project: Check_Prod (outside grid to guarantee full width) -->
+        <article class="project-card featured" data-tags="data dashboard automation dev">
+          <img
+            src="../assets/screenshots/etat-services-dashboard.png"
+            alt="Check_Prod — IT service monitoring dashboard"
+            class="project-image"
+          />
+          <div class="project-gallery">
+            <img src="../assets/screenshots/etat-services-historique.png" alt="History view — trend charts" />
+            <img src="../assets/screenshots/etat-services-admin.png" alt="Administration view — scope management" />
+          </div>
+          <h3 class="project-title">Check_Prod — IT Service Monitoring · Bouygues Telecom</h3>
+          <p class="project-description">
+            Full-stack web application designed and deployed in production to automate daily IT service status monitoring.
+            Teams report the status of each service (Available / Degraded / Unavailable), review 7-day trends and send automated reports.
+          </p>
+          <div class="project-impact">
+            → Replaced a critical manual process · Time savings of up to <strong>1h/day</strong> · In production across multiple teams · Improved data reliability
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">NestJS</span>
+            <span class="tech-tag">Oracle SQL</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Git / GitLab</span>
+            <span class="tech-tag">ServiceNow</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
 
-          <!-- Main project: Check_Prod -->
-          <article class="project-card featured" data-tags="data dashboard automation dev">
-            <img
-              src="../assets/screenshots/etat-services-dashboard.png"
-              alt="Check_Prod — IT service monitoring dashboard"
-              class="project-image"
-            />
-            <div class="project-gallery">
-              <img src="../assets/screenshots/etat-services-historique.png" alt="History view — trend charts" />
-              <img src="../assets/screenshots/etat-services-admin.png" alt="Administration view — scope management" />
-            </div>
-            <h3 class="project-title">Check_Prod — IT Service Monitoring · Bouygues Telecom</h3>
-            <p class="project-description">
-              Full-stack web application designed and deployed in production to automate daily IT service status monitoring.
-              Teams report the status of each service (Available / Degraded / Unavailable), review 7-day trends and send automated reports.
-            </p>
-            <div class="project-impact">
-              → Replaced a critical manual process · Time savings of up to <strong>1h/day</strong> · In production across multiple teams · Improved data reliability
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">NestJS</span>
-              <span class="tech-tag">Oracle SQL</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Git / GitLab</span>
-              <span class="tech-tag">ServiceNow</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
+        <div class="projects-grid">
 
           <!-- Project 2: Data & KPI -->
           <article class="project-card" data-tags="data dashboard">

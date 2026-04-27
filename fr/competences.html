@@ -44,40 +44,40 @@
           <button class="filter-btn" data-filter="dev">Développement</button>
         </div>
 
-        <div class="projects-grid">
+        <!-- Projet principal : Check_Prod (hors grid pour garantir pleine largeur) -->
+        <article class="project-card featured" data-tags="data dashboard automation dev">
+          <img
+            src="../assets/screenshots/etat-services-dashboard.png"
+            alt="Check_Prod — Dashboard de supervision des services IT"
+            class="project-image"
+          />
+          <div class="project-gallery">
+            <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — graphiques de tendance" />
+            <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres" />
+          </div>
+          <h3 class="project-title">Check_Prod — Supervision des services IT · Bouygues Telecom</h3>
+          <p class="project-description">
+            Application web full-stack conçue et déployée en production pour automatiser le suivi quotidien de l'état des services IT.
+            Les équipes renseignent le statut de chaque service (Disponible / Dégradé / Non Disponible), consultent les tendances sur 7 jours et envoient des rapports automatiques.
+          </p>
+          <div class="project-impact">
+            → Remplacement d'un processus manuel critique · Gain de temps jusqu'à <strong>1h/jour</strong> · Utilisé en production par plusieurs équipes · Meilleure fiabilité des données
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">NestJS</span>
+            <span class="tech-tag">Oracle SQL</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Git / GitLab</span>
+            <span class="tech-tag">ServiceNow</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
 
-          <!-- Projet principal : Check_Prod -->
-          <article class="project-card featured" data-tags="data dashboard automation dev">
-            <img
-              src="../assets/screenshots/etat-services-dashboard.png"
-              alt="Check_Prod — Dashboard de supervision des services IT"
-              class="project-image"
-            />
-            <div class="project-gallery">
-              <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — graphiques de tendance" />
-              <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres" />
-            </div>
-            <h3 class="project-title">Check_Prod — Supervision des services IT · Bouygues Telecom</h3>
-            <p class="project-description">
-              Application web full-stack conçue et déployée en production pour automatiser le suivi quotidien de l'état des services IT.
-              Les équipes renseignent le statut de chaque service (Disponible / Dégradé / Non Disponible), consultent les tendances sur 7 jours et envoient des rapports automatiques.
-            </p>
-            <div class="project-impact">
-              → Remplacement d'un processus manuel critique · Gain de temps jusqu'à <strong>1h/jour</strong> · Utilisé en production par plusieurs équipes · Meilleure fiabilité des données
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">NestJS</span>
-              <span class="tech-tag">Oracle SQL</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Git / GitLab</span>
-              <span class="tech-tag">ServiceNow</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/vinzgnn" class="project-link" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
+        <div class="projects-grid">
 
           <!-- Projet 2 : Analyse & KPI -->
           <article class="project-card" data-tags="data dashboard">
