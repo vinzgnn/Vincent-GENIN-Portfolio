@@ -268,13 +268,48 @@ hr {
   color: var(--accent);
 }
 
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 8px 0;
+}
+
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.profile-meta {
+  font-size: 13px;
+}
+
+.availability-badge {
+  margin-top: 4px;
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+[data-theme="dark"] .availability-badge {
+  background: #14532d;
+  color: #86efac;
 }
 
 .pdf-link {
