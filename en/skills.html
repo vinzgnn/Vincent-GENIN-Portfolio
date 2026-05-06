@@ -44,40 +44,49 @@
       <section class="card">
         <h2>Projects &amp; Skills</h2>
 
-        <!-- Main project: Check_Prod (outside grid to guarantee full width) -->
-        <article class="project-card featured" data-tags="data dashboard automation dev">
-          <img
-            src="../assets/screenshots/etat-services-dashboard.png"
-            alt="Check_Prod — IT service monitoring dashboard"
-            class="project-image"
-          />
-          <div class="project-gallery">
-            <img src="../assets/screenshots/etat-services-historique.png" alt="History view — trend charts" />
-            <img src="../assets/screenshots/etat-services-admin.png" alt="Administration view — scope management" />
-          </div>
-          <h3 class="project-title">Check_Prod — IT Service Monitoring · Bouygues Telecom</h3>
-          <p class="project-description">
-            Full-stack web application designed and deployed in production to automate daily IT service status monitoring.
-            Teams fill in the status of each service (Available / Degraded / Unavailable), review status history over a custom date range (filterable by scope or status), and send a daily report (automatically if no anomaly, manually if a service is degraded or unavailable).
-          </p>
-          <div class="project-impact">
-            → Replaced a critical manual process · Time savings of up to <strong>1h/day</strong> · In production across multiple teams · Improved data reliability
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">NestJS</span>
-            <span class="tech-tag">Oracle SQL</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Git / GitLab</span>
-            <span class="tech-tag">ServiceNow</span>
-          </div>
-        </article>
+        <!-- Tab bar -->
+        <div class="tabs-bar" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="0">Check_Prod</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="1">Data &amp; KPIs</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="2">CO2 Analytics</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="3">PSG Analytics</button>
+        </div>
 
-        <div class="projects-grid">
+        <!-- Tab 1: Check_Prod -->
+        <div class="tab-content active" data-tab="0">
+          <article class="project-card featured">
+            <img
+              src="../assets/screenshots/etat-services-dashboard.png"
+              alt="Check_Prod — IT service monitoring dashboard"
+              class="project-image"
+            />
+            <div class="project-gallery">
+              <img src="../assets/screenshots/etat-services-historique.png" alt="History view — trend charts" />
+              <img src="../assets/screenshots/etat-services-admin.png" alt="Administration view — scope management" />
+            </div>
+            <h3 class="project-title">Check_Prod — IT Service Monitoring · Bouygues Telecom</h3>
+            <p class="project-description">
+              Full-stack web application designed and deployed in production to automate daily IT service status monitoring.
+              Teams fill in the status of each service (Available / Degraded / Unavailable), review status history over a custom date range (filterable by scope or status), and send a daily report (automatically if no anomaly, manually if a service is degraded or unavailable).
+            </p>
+            <div class="project-impact">
+              → Replaced a critical manual process · Time savings of up to <strong>1h/day</strong> · In production across multiple teams · Improved data reliability
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Oracle SQL</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Git / GitLab</span>
+              <span class="tech-tag">ServiceNow</span>
+            </div>
+          </article>
+        </div>
 
-          <!-- Project 2: Data & KPI -->
-          <article class="project-card" data-tags="data dashboard">
+        <!-- Tab 2: Data & KPIs -->
+        <div class="tab-content" data-tab="1">
+          <article class="project-card featured">
             <h3 class="project-title">Data Analysis &amp; Operational KPIs · Bouygues Telecom</h3>
             <p class="project-description">
               Extraction, cleaning and structuring of data from Oracle databases.
@@ -91,9 +100,11 @@
               <span class="tech-tag">DBVisualizer</span>
             </div>
           </article>
+        </div>
 
-          <!-- Project 3: CO2 Analytics · Artefact -->
-          <article class="project-card" data-tags="data dashboard">
+        <!-- Tab 3: CO2 Analytics -->
+        <div class="tab-content" data-tab="2">
+          <article class="project-card featured">
             <h3 class="project-title">🌍 CO2 Emissions per Capita · Artefact School of Data</h3>
             <p class="project-description">
               Interactive analysis app of CO2 emissions per capita (1950–2010). Filters by period, continent and number of countries. Visualisations: top emitters ranking, world maps and trend curves. Key KPIs: top emitting country, max emissions, world average.
@@ -110,9 +121,11 @@
               <span class="tech-tag">Plotly</span>
             </div>
           </article>
+        </div>
 
-          <!-- Project 4: PSG Analytics -->
-          <article class="project-card" data-tags="data dashboard ai">
+        <!-- Tab 4: PSG Analytics -->
+        <div class="tab-content" data-tab="3">
+          <article class="project-card featured">
             <img
               src="../assets/screenshots/psg-classement.png"
               alt="PSG Analytics — Ligue 1 standings"
@@ -142,8 +155,8 @@
               <span class="tech-tag">Tool use</span>
             </div>
           </article>
-
         </div>
+
       </section>
 
       <footer class="footer">
@@ -157,6 +170,19 @@
     </div>
 
     <script>
+      // Tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tab = btn.dataset.tab;
+          document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+          document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          document.querySelector(`.tab-content[data-tab="${tab}"]`).classList.add('active');
+        });
+      });
+
+      // Lightbox
       const overlay = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
 

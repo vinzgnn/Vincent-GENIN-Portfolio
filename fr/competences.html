@@ -44,40 +44,49 @@
       <section class="card">
         <h2>Projets et compétences</h2>
 
-        <!-- Projet principal : Check_Prod (hors grid pour garantir pleine largeur) -->
-        <article class="project-card featured" data-tags="data dashboard automation dev">
-          <img
-            src="../assets/screenshots/etat-services-dashboard.png"
-            alt="Check_Prod — Dashboard de supervision des services IT"
-            class="project-image"
-          />
-          <div class="project-gallery">
-            <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — graphiques de tendance" />
-            <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres" />
-          </div>
-          <h3 class="project-title">Check_Prod — Supervision des services IT · Bouygues Telecom</h3>
-          <p class="project-description">
-            Application web full-stack conçue et déployée en production pour automatiser le suivi quotidien de l'état des services IT.
-            Les équipes renseignent le statut de chaque service (Disponible / Dégradé / Non Disponible), consultent l'historique des statuts sur une plage de dates personnalisée (filtrable par périmètre ou par statut), et envoient un rapport quotidien (automatique si aucune anomalie, manuel en cas de service dégradé ou indisponible).
-          </p>
-          <div class="project-impact">
-            → Remplacement d'un processus manuel critique · Gain de temps jusqu'à <strong>1h/jour</strong> · Utilisé en production par plusieurs équipes · Meilleure fiabilité des données
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">NestJS</span>
-            <span class="tech-tag">Oracle SQL</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Git / GitLab</span>
-            <span class="tech-tag">ServiceNow</span>
-          </div>
-        </article>
+        <!-- Barre d'onglets -->
+        <div class="tabs-bar" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="0">Check_Prod</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="1">Analyse KPI</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="2">CO2 Analytics</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="3">PSG Analytics</button>
+        </div>
 
-        <div class="projects-grid">
+        <!-- Onglet 1 : Check_Prod -->
+        <div class="tab-content active" data-tab="0">
+          <article class="project-card featured">
+            <img
+              src="../assets/screenshots/etat-services-dashboard.png"
+              alt="Check_Prod — Dashboard de supervision des services IT"
+              class="project-image"
+            />
+            <div class="project-gallery">
+              <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — graphiques de tendance" />
+              <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres" />
+            </div>
+            <h3 class="project-title">Check_Prod — Supervision des services IT · Bouygues Telecom</h3>
+            <p class="project-description">
+              Application web full-stack conçue et déployée en production pour automatiser le suivi quotidien de l'état des services IT.
+              Les équipes renseignent le statut de chaque service (Disponible / Dégradé / Non Disponible), consultent l'historique des statuts sur une plage de dates personnalisée (filtrable par périmètre ou par statut), et envoient un rapport quotidien (automatique si aucune anomalie, manuel en cas de service dégradé ou indisponible).
+            </p>
+            <div class="project-impact">
+              → Remplacement d'un processus manuel critique · Gain de temps jusqu'à <strong>1h/jour</strong> · Utilisé en production par plusieurs équipes · Meilleure fiabilité des données
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Oracle SQL</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Git / GitLab</span>
+              <span class="tech-tag">ServiceNow</span>
+            </div>
+          </article>
+        </div>
 
-          <!-- Projet 2 : Analyse & KPI -->
-          <article class="project-card" data-tags="data dashboard">
+        <!-- Onglet 2 : Analyse KPI -->
+        <div class="tab-content" data-tab="1">
+          <article class="project-card featured">
             <h3 class="project-title">Analyse de données &amp; KPI opérationnels · Bouygues Telecom</h3>
             <p class="project-description">
               Extraction, nettoyage et structuration des données issues de la base Oracle.
@@ -91,9 +100,11 @@
               <span class="tech-tag">DBVisualizer</span>
             </div>
           </article>
+        </div>
 
-          <!-- Projet 3 : CO2 Analytics · Artefact -->
-          <article class="project-card" data-tags="data dashboard">
+        <!-- Onglet 3 : CO2 Analytics -->
+        <div class="tab-content" data-tab="2">
+          <article class="project-card featured">
             <h3 class="project-title">🌍 Émissions de CO2 par habitant · Artefact School of Data</h3>
             <p class="project-description">
               Application d'analyse interactive des émissions de CO2 par habitant (1950–2010). Filtres par période, continent et nombre de pays. Visualisations : classement des top émetteurs, cartes mondiales et courbes d'évolution. KPIs clés : pays le plus émetteur, émissions max, moyenne mondiale.
@@ -110,9 +121,11 @@
               <span class="tech-tag">Plotly</span>
             </div>
           </article>
+        </div>
 
-          <!-- Projet 4 : PSG Analytics -->
-          <article class="project-card" data-tags="data dashboard ai">
+        <!-- Onglet 4 : PSG Analytics -->
+        <div class="tab-content" data-tab="3">
+          <article class="project-card featured">
             <img
               src="../assets/screenshots/psg-classement.png"
               alt="PSG Analytics — Classement Ligue 1"
@@ -142,8 +155,8 @@
               <span class="tech-tag">Tool use</span>
             </div>
           </article>
-
         </div>
+
       </section>
 
       <footer class="footer">
@@ -157,6 +170,19 @@
     </div>
 
     <script>
+      // Onglets
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tab = btn.dataset.tab;
+          document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+          document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          document.querySelector(`.tab-content[data-tab="${tab}"]`).classList.add('active');
+        });
+      });
+
+      // Lightbox
       const overlay = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
 
