@@ -569,6 +569,57 @@ hr {
   }
 }
 
+/* Badge période projet */
+.project-badge {
+  display: inline-block;
+  background: var(--subtle);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+/* Sections structurées (Contexte / Réalisations / Impact) */
+.project-section {
+  margin-bottom: 16px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+
+.project-section ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.project-section ul li {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
 /* Onglets projets */
 .tabs-bar {
   display: flex;
@@ -598,9 +649,10 @@ hr {
 }
 
 .tab-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--text);
+  border-bottom-color: var(--text);
   background: transparent;
+  font-weight: 600;
 }
 
 .tab-content {
@@ -610,6 +662,153 @@ hr {
 .tab-content.active {
   display: block;
   animation: fadeInUp 0.3s ease forwards;
+}
+
+/* Compteur onglets */
+.project-counter {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Badge statut projet */
+.project-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+.status-dot.personal {
+  background: var(--accent);
+}
+
+/* Layout 2 colonnes */
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+@media (min-width: 720px) {
+  .project-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-media .project-image {
+  margin-bottom: 0;
+}
+
+/* Tableau contexte */
+.context-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.context-row {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.context-key {
+  color: var(--muted);
+  min-width: 70px;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.context-val {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Impact metric cards */
+.impact-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.impact-card {
+  flex: 1;
+  min-width: 90px;
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.impact-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.impact-label {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* Liste avec tirets */
+.dash-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-list li {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.dash-list li::before {
+  content: "–";
+  color: var(--muted);
+  flex-shrink: 0;
 }
 
 @media print {

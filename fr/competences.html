@@ -24,7 +24,7 @@
       <header class="site-header">
         <div class="header-left">
           <h1 class="site-title">Vincent GÉNIN</h1>
-          <p class="site-subtitle muted">Data Analyst | SQL, Power BI, Tableau, Dataiku</p>
+          <p class="site-subtitle muted">Data Analyst · SQL · Power BI · Tableau · Dataiku</p>
         </div>
         <div class="header-right">
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -44,116 +44,336 @@
       <section class="card">
         <h2>Projets et compétences</h2>
 
+        <!-- Compteur -->
+        <p class="project-counter" id="project-counter">PROJETS / 01 SUR 03</p>
+
         <!-- Barre d'onglets -->
         <div class="tabs-bar" role="tablist">
           <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="0">Check_Prod</button>
-          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="1">Analyse KPI</button>
-          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="2">CO2 Analytics</button>
-          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="3">PSG Analytics</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="1">CO2 Analytics</button>
+          <button class="tab-btn"         role="tab" aria-selected="false" data-tab="2">PSG Analytics</button>
         </div>
 
-        <!-- Onglet 1 : Check_Prod -->
+        <!-- ─── Onglet 1 : Check_Prod ─── -->
         <div class="tab-content active" data-tab="0">
           <article class="project-card featured">
-            <img
-              src="../assets/screenshots/etat-services-dashboard.png"
-              alt="Check_Prod — Dashboard de supervision des services IT"
-              class="project-image"
-            />
-            <div class="project-gallery">
-              <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — graphiques de tendance" />
-              <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres" />
+
+            <div class="project-status">
+              <span class="status-dot"></span>EN PRODUCTION
             </div>
-            <h3 class="project-title">Check_Prod — Supervision des services IT · Bouygues Telecom</h3>
-            <p class="project-description">
-              Application web full-stack conçue et déployée en production pour automatiser le suivi quotidien de l'état des services IT.
-              Les équipes renseignent le statut de chaque service (Disponible / Dégradé / Non Disponible), consultent l'historique des statuts sur une plage de dates personnalisée (filtrable par périmètre ou par statut), et envoient un rapport quotidien (automatique si aucune anomalie, manuel en cas de service dégradé ou indisponible).
-            </p>
-            <div class="project-impact">
-              → Remplacement d'un processus manuel critique · Gain de temps jusqu'à <strong>1h/jour</strong> · Utilisé en production par plusieurs équipes · Meilleure fiabilité des données
+            <h3 class="project-title">Check_Prod — Supervision des services IT</h3>
+            <p class="project-description">Application full-stack qui remplace un suivi manuel quotidien des services IT chez un opérateur télécom.</p>
+
+            <div class="project-layout">
+              <div class="project-details">
+
+                <div class="project-section">
+                  <h4 class="section-label">Contexte</h4>
+                  <div class="context-table">
+                    <div class="context-row">
+                      <span class="context-key">Entreprise</span>
+                      <span class="context-val">Bouygues Telecom · DIPS</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Rôle</span>
+                      <span class="context-val">Conception &amp; développement full-stack</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Période</span>
+                      <span class="context-val">2023 – 2025 · alternance</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Réalisations</h4>
+                  <ul class="dash-list">
+                    <li>Immersion "vis ma vie" auprès des équipes RCI pour comprendre les besoins terrain</li>
+                    <li>Rédaction d'un cahier des charges évolutif, co-construit avec les utilisateurs</li>
+                    <li>Développement full-stack de A à Z : interface React, API NestJS, base Oracle</li>
+                    <li>Migration MySQL (local) → Oracle (production) selon les standards internes</li>
+                    <li>Intégration du SSO interne Picasso pour la gestion des rôles par périmètre</li>
+                    <li>API REST permettant aux scripts automatisés de remonter leurs statuts</li>
+                    <li>Documentation technique, manuels utilisateurs et guide d'exploitation</li>
+                    <li>Formation des équipes + support post-déploiement</li>
+                    <li>Double run avec l'ancien fichier Excel avant bascule définitive</li>
+                  </ul>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Impact</h4>
+                  <div class="impact-grid">
+                    <div class="impact-card">
+                      <div class="impact-number">~1h</div>
+                      <div class="impact-label">gagnée par jour, par équipe</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">4</div>
+                      <div class="impact-label">équipes utilisatrices</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">0</div>
+                      <div class="impact-label">oubli de reporting depuis le run</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Stack</h4>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">Oracle SQL</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">API REST</span>
+                    <span class="tech-tag">Git / GitLab</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="../assets/screenshots/etat-services-dashboard.png"
+                  alt="Check_Prod — Vue Checks Quotidiens"
+                  class="project-image"
+                />
+                <div class="project-gallery">
+                  <img src="../assets/screenshots/etat-services-historique.png" alt="Vue Historique — consultation et export des statuts passés" />
+                  <img src="../assets/screenshots/etat-services-admin.png" alt="Vue Administration — gestion des périmètres et des droits" />
+                </div>
+              </div>
             </div>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">NestJS</span>
-              <span class="tech-tag">Oracle SQL</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Git / GitLab</span>
-              <span class="tech-tag">ServiceNow</span>
+
+            <hr class="project-divider" />
+
+            <!-- Projet secondaire : KPI -->
+            <div class="project-status">
+              <span class="status-dot personal"></span>ANALYSE DE DONNÉES
             </div>
+            <h3 class="project-title">KPI &amp; tableaux de bord opérationnels</h3>
+            <p class="project-description">Suivi des indicateurs de qualité de service IT pour les comités de pilotage de la DIPS.</p>
+
+            <div class="project-layout">
+              <div class="project-details">
+                <div class="project-section">
+                  <h4 class="section-label">Réalisations</h4>
+                  <ul class="dash-list">
+                    <li>Extraction et nettoyage des données depuis Oracle via SQL et DBVisualizer</li>
+                    <li>Conception de tableaux de bord interactifs sous Tableau et Power BI</li>
+                    <li>Indicateurs de performance présentés aux comités hebdomadaires et mensuels</li>
+                  </ul>
+                </div>
+                <div class="project-section">
+                  <h4 class="section-label">Stack</h4>
+                  <div class="project-tech">
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Oracle</span>
+                    <span class="tech-tag">Tableau</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">DBVisualizer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </article>
         </div>
 
-        <!-- Onglet 2 : Analyse KPI -->
+        <!-- ─── Onglet 2 : CO2 Analytics ─── -->
         <div class="tab-content" data-tab="1">
           <article class="project-card featured">
-            <h3 class="project-title">Analyse de données &amp; KPI opérationnels · Bouygues Telecom</h3>
-            <p class="project-description">
-              Extraction, nettoyage et structuration des données issues de la base Oracle.
-              Conception et maintenance de tableaux de bord interactifs sous Tableau pour le pilotage des indicateurs de performance des services IT.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">Oracle</span>
-              <span class="tech-tag">Tableau</span>
-              <span class="tech-tag">Power BI</span>
-              <span class="tech-tag">DBVisualizer</span>
+
+            <div class="project-status">
+              <span class="status-dot personal"></span>PROJET DE FORMATION
             </div>
+            <h3 class="project-title">🌍 Émissions de CO2 par habitant</h3>
+            <p class="project-description">Application d'analyse interactive des émissions mondiales de CO2, couvrant la période 1950–2010.</p>
+
+            <div class="project-layout">
+              <div class="project-details">
+
+                <div class="project-section">
+                  <h4 class="section-label">Contexte</h4>
+                  <div class="context-table">
+                    <div class="context-row">
+                      <span class="context-key">École</span>
+                      <span class="context-val">Artefact School of Data</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Rôle</span>
+                      <span class="context-val">Analyse de données &amp; développement</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Période</span>
+                      <span class="context-val">2026</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Réalisations</h4>
+                  <ul class="dash-list">
+                    <li>Nettoyage et structuration du dataset avec pandas</li>
+                    <li>Interface Streamlit avec filtres dynamiques (période, continent, pays)</li>
+                    <li>3 vues analytiques : classement des top émetteurs, cartes choroplèthes, courbes d'évolution</li>
+                    <li>Calcul automatique des KPIs : pays le plus émetteur, émissions max, moyenne mondiale</li>
+                    <li>Déploiement sur Streamlit Cloud</li>
+                  </ul>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Impact</h4>
+                  <div class="impact-grid">
+                    <div class="impact-card">
+                      <div class="impact-number">60</div>
+                      <div class="impact-label">ans de données couvertes</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">3</div>
+                      <div class="impact-label">vues analytiques</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">1</div>
+                      <div class="impact-label">app déployée en ligne</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Liens</h4>
+                  <div class="project-impact">
+                    <a href="https://artefact-co2-analytics-vincent-genin.streamlit.app/" target="_blank" rel="noopener">App live</a> ·
+                    <a href="https://github.com/vinzgnn/Artefact-Co2-Analytics" target="_blank" rel="noopener">GitHub</a>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Stack</h4>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">pandas</span>
+                    <span class="tech-tag">Plotly</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="../assets/screenshots/co2-1.png"
+                  alt="CO2 Analytics — Vue classement top émetteurs"
+                  class="project-image"
+                />
+                <div class="project-gallery">
+                  <img src="../assets/screenshots/co2-2.png" alt="CO2 Analytics — Carte choroplèthe mondiale" />
+                  <img src="../assets/screenshots/co2-3.png" alt="CO2 Analytics — Courbes d'évolution par pays" />
+                </div>
+              </div>
+            </div>
+
           </article>
         </div>
 
-        <!-- Onglet 3 : CO2 Analytics -->
+        <!-- ─── Onglet 3 : PSG Analytics ─── -->
         <div class="tab-content" data-tab="2">
           <article class="project-card featured">
-            <h3 class="project-title">🌍 Émissions de CO2 par habitant · Artefact School of Data</h3>
-            <p class="project-description">
-              Application d'analyse interactive des émissions de CO2 par habitant (1950–2010). Filtres par période, continent et nombre de pays. Visualisations : classement des top émetteurs, cartes mondiales et courbes d'évolution. KPIs clés : pays le plus émetteur, émissions max, moyenne mondiale.
-            </p>
-            <div class="project-impact">
-              →
-              <a href="https://artefact-co2-analytics-vincent-genin.streamlit.app/" target="_blank" rel="noopener">App live</a> ·
-              <a href="https://github.com/vinzgnn/Artefact-Co2-Analytics" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">pandas</span>
-              <span class="tech-tag">Plotly</span>
-            </div>
-          </article>
-        </div>
 
-        <!-- Onglet 4 : PSG Analytics -->
-        <div class="tab-content" data-tab="3">
-          <article class="project-card featured">
-            <img
-              src="../assets/screenshots/psg-classement.png"
-              alt="PSG Analytics — Classement Ligue 1"
-              class="project-image"
-            />
-            <div class="project-gallery">
-              <img src="../assets/screenshots/psg-performance.png" alt="Performance PSG — points cumulés, clean sheets" />
-              <img src="../assets/screenshots/psg-top-performers.png" alt="Top performers Ligue 1 — buteurs et passeurs" />
+            <div class="project-status">
+              <span class="status-dot personal"></span>PROJET PERSONNEL
             </div>
-            <h3 class="project-title">PSG Analytics — Dashboard & Assistant IA · Projet personnel</h3>
-            <p class="project-description">
-              Pipeline data end-to-end analysant les performances du PSG en Ligue 1 : ingestion API, modélisation BigQuery via dbt, dashboard Looker Studio 3 pages, et assistant conversationnel propulsé par l'API Claude avec tool use BigQuery.
-            </p>
-            <div class="project-impact">
-              → Pipeline complet de la donnée brute au dashboard · Assistant IA interrogeant BigQuery en langage naturel ·
-              <a href="https://datastudio.google.com/reporting/7e12323e-aed2-4884-9ee2-b3c1e4b170c6" target="_blank" rel="noopener">Dashboard live</a> ·
-              <a href="https://psg-analytic.streamlit.app" target="_blank" rel="noopener">Assistant live</a> ·
-              <a href="https://github.com/vinzgnn/psg-analytics" target="_blank" rel="noopener">GitHub</a>
+            <h3 class="project-title">PSG Analytics — Dashboard &amp; Assistant IA</h3>
+            <p class="project-description">Pipeline data complet : ingestion API, modélisation BigQuery/dbt, dashboard Looker Studio et assistant IA conversationnel.</p>
+
+            <div class="project-layout">
+              <div class="project-details">
+
+                <div class="project-section">
+                  <h4 class="section-label">Contexte</h4>
+                  <div class="context-table">
+                    <div class="context-row">
+                      <span class="context-key">Objectif</span>
+                      <span class="context-val">Portfolio — pipeline data moderne de bout en bout</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Rôle</span>
+                      <span class="context-val">Data engineer &amp; développement IA</span>
+                    </div>
+                    <div class="context-row">
+                      <span class="context-key">Période</span>
+                      <span class="context-val">2026</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Réalisations</h4>
+                  <ul class="dash-list">
+                    <li>Ingestion des données Ligue 1 via l'API football-data.org (Python → BigQuery)</li>
+                    <li>Modélisation 3 couches avec dbt : raw → staging → marts (41 tests au vert)</li>
+                    <li>Dashboard Looker Studio 3 pages : classement L1, performance PSG, top performers</li>
+                    <li>Assistant IA conversationnel avec l'API Claude (tool use) — interroge BigQuery en langage naturel</li>
+                    <li>Interface Streamlit avec exemples cliquables, déployée sur Streamlit Cloud</li>
+                  </ul>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Impact</h4>
+                  <div class="impact-grid">
+                    <div class="impact-card">
+                      <div class="impact-number">41</div>
+                      <div class="impact-label">tests dbt au vert</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">3</div>
+                      <div class="impact-label">pages dashboard</div>
+                    </div>
+                    <div class="impact-card">
+                      <div class="impact-number">1</div>
+                      <div class="impact-label">assistant IA déployé</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Liens</h4>
+                  <div class="project-impact">
+                    <a href="https://datastudio.google.com/reporting/7e12323e-aed2-4884-9ee2-b3c1e4b170c6" target="_blank" rel="noopener">Dashboard live</a> ·
+                    <a href="https://psg-analytic.streamlit.app" target="_blank" rel="noopener">Assistant live</a> ·
+                    <a href="https://github.com/vinzgnn/psg-analytics" target="_blank" rel="noopener">GitHub</a>
+                  </div>
+                </div>
+
+                <div class="project-section">
+                  <h4 class="section-label">Stack</h4>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">BigQuery</span>
+                    <span class="tech-tag">dbt</span>
+                    <span class="tech-tag">Looker Studio</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">API Claude</span>
+                    <span class="tech-tag">Tool use</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="project-media">
+                <img
+                  src="../assets/screenshots/psg-classement.png"
+                  alt="PSG Analytics — Classement Ligue 1"
+                  class="project-image"
+                />
+                <div class="project-gallery">
+                  <img src="../assets/screenshots/psg-performance.png" alt="Performance PSG — points cumulés, clean sheets, bilan saison" />
+                  <img src="../assets/screenshots/psg-top-performers.png" alt="Top performers Ligue 1 — buteurs et passeurs avec focus PSG" />
+                </div>
+              </div>
             </div>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">BigQuery</span>
-              <span class="tech-tag">dbt</span>
-              <span class="tech-tag">Looker Studio</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">API Claude</span>
-              <span class="tech-tag">Tool use</span>
-            </div>
+
           </article>
         </div>
 
@@ -170,6 +390,14 @@
     </div>
 
     <script>
+      const counter = document.getElementById('project-counter');
+      const total = document.querySelectorAll('.tab-btn').length;
+
+      function pad(n) { return n.toString().padStart(2, '0'); }
+      function updateCounter(tab) {
+        counter.textContent = `PROJETS / ${pad(parseInt(tab) + 1)} SUR ${pad(total)}`;
+      }
+
       // Onglets
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -179,6 +407,7 @@
           btn.classList.add('active');
           btn.setAttribute('aria-selected', 'true');
           document.querySelector(`.tab-content[data-tab="${tab}"]`).classList.add('active');
+          updateCounter(tab);
         });
       });
 
