@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(gh repo:*)",
+      "Bash(git fetch:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git rm:*)",
+      "Bash(git push:*)",
+      "Bash(cp \"/Users/vgenin/Documents/Code/cv-en-ligne/assets/cv-fr.pdf\" /tmp/cv-fr-new.pdf)",
+      "Bash(cp \"/Users/vgenin/Documents/Code/cv-en-ligne/fr/cv-fr.pdf\" /tmp/cv-fr-new-fr.pdf)",
+      "Bash(cp /tmp/cv-fr-new.pdf \"/Users/vgenin/Documents/Code/cv-en-ligne/assets/cv-fr.pdf\")",
+      "Bash(cp /tmp/cv-fr-new-fr.pdf \"/Users/vgenin/Documents/Code/cv-en-ligne/fr/cv-fr.pdf\")",
+      "Bash(yes)",
+      "Read(//Users/vgenin/Documents/Code/**)",
+      "Bash(npm run:*)",
+      "Bash(curl -s http://localhost:5174)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx playwright:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(node screenshot-demo.mjs)",
+      "Bash(sips -Z 1200 /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-dashboard.png --out /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-dashboard.png)",
+      "Bash(sips -Z 1200 /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-historique.png --out /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-historique.png)",
+      "Bash(sips -Z 1200 /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-admin.png --out /Users/vgenin/Documents/Code/cv-en-ligne/assets/screenshots/etat-services-admin.png)",
+      "Bash(pdftotext \"/Users/vgenin/Documents/ECOLE/Mémoire/Mémoire Final.pdf\" -)",
+      "Bash(mdls \"/Users/vgenin/Documents/ECOLE/Mémoire/Mémoire Final.pdf\")"
+    ]
+  }
+}
