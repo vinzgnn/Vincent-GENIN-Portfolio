@@ -285,7 +285,7 @@
               <span class="status-dot personal"></span>PROJET PERSONNEL
             </div>
             <h3 class="project-title">PSG Analytics — Dashboard &amp; Assistant IA</h3>
-            <p class="project-description">Pipeline data complet : ingestion API, modélisation BigQuery/dbt, dashboard Looker Studio et assistant IA conversationnel.</p>
+            <p class="project-description">Pipeline data complet : ingestion API, modélisation BigQuery/dbt, dashboard Looker Studio, assistant IA conversationnel et API REST sécurisée déployée sur Cloud Run.</p>
 
             <div class="project-layout">
               <div class="project-details">
@@ -314,8 +314,9 @@
                     <li>Ingestion des données Ligue 1 via l'API football-data.org (Python → BigQuery)</li>
                     <li>Modélisation 3 couches avec dbt : raw → staging → marts (41 tests au vert)</li>
                     <li>Dashboard Looker Studio 3 pages : classement L1, performance PSG, top performers</li>
-                    <li>Assistant IA conversationnel avec l'API Claude (tool use) — interroge BigQuery en langage naturel</li>
+                    <li>Assistant IA conversationnel avec l'API Claude (tool use) — interroge les données en langage naturel</li>
                     <li>Interface Streamlit avec exemples cliquables, déployée sur Streamlit Cloud</li>
+                    <li>API REST maison (FastAPI) avec authentification par clé, containerisée avec Docker et déployée sur Google Cloud Run</li>
                   </ul>
                 </div>
 
@@ -334,6 +335,10 @@
                       <div class="impact-number">1</div>
                       <div class="impact-label">assistant IA déployé</div>
                     </div>
+                    <div class="impact-card">
+                      <div class="impact-number">API</div>
+                      <div class="impact-label">FastAPI sur Cloud Run</div>
+                    </div>
                   </div>
                 </div>
 
@@ -342,6 +347,7 @@
                   <div class="project-impact">
                     <a href="https://datastudio.google.com/reporting/7e12323e-aed2-4884-9ee2-b3c1e4b170c6" target="_blank" rel="noopener">Dashboard live</a> ·
                     <a href="https://psg-analytic.streamlit.app" target="_blank" rel="noopener">Assistant live</a> ·
+                    <a href="https://psg-analytics-api-990509883678.europe-west1.run.app/docs" target="_blank" rel="noopener">API docs</a> ·
                     <a href="https://github.com/vinzgnn/psg-analytics" target="_blank" rel="noopener">GitHub</a>
                   </div>
                 </div>
@@ -356,6 +362,9 @@
                     <span class="tech-tag">Streamlit</span>
                     <span class="tech-tag">API Claude</span>
                     <span class="tech-tag">Tool use</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Cloud Run</span>
                   </div>
                 </div>
 
